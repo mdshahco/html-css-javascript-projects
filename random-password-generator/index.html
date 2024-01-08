@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1 class="heading">Random Password Generator</h1>
+      <p>
+        Create strong and secure passwords to keep your account safe online.
+      </p>
+    </header>
+    <section class="display">
+      <div class="wrapper">
+        <input type="text" name="" id="password-display" disabled />
+        <span id="copy-btn">
+          <svg fill="none" height="32" stroke-width="1.5" viewBox="0 0 24 24" width="32"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M19.4 20H9.6C9.26863 20 9 19.7314 9 19.4V9.6C9 9.26863 9.26863 9 9.6 9H19.4C19.7314 9 20 9.26863 20 9.6V19.4C20 19.7314 19.7314 20 19.4 20Z"
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M15 9V4.6C15 4.26863 14.7314 4 14.4 4H4.6C4.26863 4 4 4.26863 4 4.6V14.4C4 14.7314 4.26863 15 4.6 15H9"
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+      </div>
+    </section>
+    <section class="customize">
+      <h2>Customize your password</h2>
+      <div class="wrapper">
+        <div class="left-side">
+          <div class="customize-item">
+            <div>
+              <label for="length"><b>Password Length</b></label>
+              <input type="number" min="1" max="128" value="12" id="length-input" />
+            </div>
+            <input type="range" class="slider" min="1" max="128" value="12" id="length-slider" />
+          </div>
+        </div>
+        <div class="right-side">
+          <p>Characters used</p>
+          <div class="customize-item">
+            <label for="uppercase" class="checkbox-container">
+              <input type="checkbox" id="uppercase" checked />
+              <div class="checkmark"></div>
+            </label>
+            <label for="uppercase">uppercase</label>
+          </div>
+          <div class="customize-item">
+            <label for="lowercase" class="checkbox-container">
+              <input type="checkbox" id="lowercase" />
+              <div class="checkmark"></div>
+            </label>
+            <label for="lowercase">lowercase</label>
+          </div>
+          <div class="customize-item">
+            <label for="numbers" class="checkbox-container">
+              <input type="checkbox" id="numbers" />
+              <div class="checkmark"></div>
+            </label>
+            <label for="numbers">numbers</label>
+          </div>
+          <div class="customize-item">
+            <label for="symbols" class="checkbox-container">
+              <input type="checkbox" id="symbols" />
+              <div class="checkmark"></div>
+            </label>
+            <label for="symbols">symbols</label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <button class="btn" id="generate-btn">Generate</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

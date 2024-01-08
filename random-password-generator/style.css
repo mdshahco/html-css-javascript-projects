@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --font-color: #071d2b;
+  --bg-color: #fff;
+  --primary-color: #0070f6;
+  --secondary-color: #a3abba;
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  user-select: none;
+  color: var(--font-color);
+  background-color: var(--primary-color);
+  font-family: var(--font-family);
+}
+
+.container {
+  width: 40em;
+  min-height: 60vh;
+  margin: 0 auto;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  background-color: var(--bg-color);
+}
+
+header {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--font-color);
+  margin-bottom: -20px;
+}
+
+header p {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.display .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0.5em;
+  margin-bottom: 1em;
+  border: 2px solid var(--secondary-color);
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+
+.display .wrapper input {
+  width: 100%;
+  height: 35px;
+  padding-left: 0.5em;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: var(--font-color);
+  background-color: transparent;
+  font-family: var(--font-family);
+}
+
+.display .wrapper span {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.customize h2 {
+  text-align: center;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.customize .wrapper {
+  display: flex;
+  gap: 1em;
+  justify-content: space-around;
+  margin-top: 1.5em;
+}
+
+.customize .customize-item {
+  display: flex;
+  margin-bottom: 1em;
+  text-transform: capitalize;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: var(--secondary-color);
+}
+
+.checkbox-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container:hover input~.checkmark,
+.checkbox-container input:checked~.checkmark {
+  background-color: var(--primary-color);
+}
+
+.checkbox-container input:checked~.checkmark:after {
+  display: block;
+}
+
+.customize .left-side .customize-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+
+.customize .right-side p {
+  margin-top: 0;
+  font-weight: 700;
+
+}
+
+.slider {
+  width: 100%;
+  height: 15px;
+  margin-top: 5px;
+  border-radius: 30px !important;
+  background-color: var(--secondary-color);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+/* for chrome */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* for mozilla */
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  font-size: 16px;
+  margin-top: 1em;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.btn:hover {
+  background-color: #0060d6;
+  ;
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .customize .wrapper {
+    flex-direction: column;
+  }
+
+  .customize .left-side {
+    margin-bottom: 1em;
+  }
+
+  .customize .right-side .customize-item {
+    margin-bottom: 1em;
+
+  }
+}
